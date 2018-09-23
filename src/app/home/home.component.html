@@ -1,6 +1,33 @@
 <div style="display: flex; max-width: 1100px; margin: 0 auto;padding-top: 15px">
   <mat-card style="flex-grow: 1;margin-right: 15px">
-    欢迎访问东华小窝
+    <div style="display: flex;">
+      <div style="flex-grow: 1; display:flex;align-items:center">
+        <mat-icon style="font-size: 30px;height: auto" color="primary">add_circle</mat-icon>
+      </div>
+      <div style="display: flex; justify-content:flex-end">
+        <mat-form-field>
+          <input matInput placeholder="">
+          <mat-icon matSuffix>search</mat-icon>
+        </mat-form-field>
+      </div>
+    </div>
+    <mat-tab-group>
+      <mat-tab label="关注">
+        <ng-template matTabContent>
+          <app-post-list key="follow"></app-post-list>
+        </ng-template>
+      </mat-tab>
+      <mat-tab label="发现">
+        <ng-template matTabContent>
+          <app-post-list key="discover"></app-post-list>
+        </ng-template>
+      </mat-tab>
+      <mat-tab disabled label="热榜">
+        <ng-template matTabContent>
+          <app-post-list key="hot"></app-post-list>
+        </ng-template>
+      </mat-tab>
+    </mat-tab-group>
   </mat-card>
   <div style="flex-shrink: 0">
     <app-side-bar></app-side-bar>

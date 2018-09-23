@@ -1,3 +1,20 @@
-<p>
-  user works!
-</p>
+<div style="margin-top: 50px;display:flex;justify-content:center;flex-direction:column;align-items:center">
+  <app-avatar style="height: auto;width:100px;"></app-avatar>
+  <div class="fields" style="width: 400px;">
+    <div>
+      昵称: {{ user.username }}
+    </div>
+    <div>
+      个人简介: {{ user.desc }}
+    </div>
+  </div>
+  <button style="margin-top: 30px; margin-bottom:20px" mat-raised-button color="primary">
+    编辑资料
+  </button>
+  <mat-card style="width:1000px">
+    <mat-tab-group>
+      <mat-tab label="动态"></mat-tab>
+      <mat-tab label="收藏"></mat-tab>
+    </mat-tab-group>
+  </mat-card>
+</div>

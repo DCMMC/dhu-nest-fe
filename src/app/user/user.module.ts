@@ -1,10 +1,11 @@
-import { MatButtonModule, MatFormFieldModule, MatInputModule } from '@angular/material';
+import { MatButtonModule, MatFormFieldModule, MatInputModule, MatIconModule, MatCardModule, MatTabsModule } from '@angular/material';
 import { LoginComponent } from './login/login.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UserComponent } from './user.component';
 import { UserRoutes } from './user.routing';
 import { FormsModule } from '@angular/forms';
+import { AvatarModule } from '../../modules/avatar/avatar.module';
 
 @NgModule({
   imports: [
@@ -14,6 +15,10 @@ import { FormsModule } from '@angular/forms';
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
+    MatIconModule,
+    AvatarModule,
+    MatCardModule,
+    MatTabsModule,
   ],
   providers: [],
   declarations: [UserComponent, LoginComponent],

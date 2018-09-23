@@ -4,10 +4,14 @@
     <div>
       <div>
         <button *ngIf="!user" mat-button color="primary">注册</button>
-        <button *ngIf="!user" mat-button color="primary">登录</button>
+        <a *ngIf="!user" routerLink="/user/login">
+         <button *ngIf="!user" mat-button color="primary">登录</button>
+        </a>
         <mat-menu #menu="matMenu">
-          <button mat-menu-item>我的主页</button>
-          <button mat-menu-item>注销</button>
+          <a routerLink="/user" style="text-decoration: none">
+            <button mat-menu-item>我的主页</button>
+          </a>
+          <button mat-menu-item (click)="logout()">注销</button>
         </mat-menu>
         <button *ngIf="user" mat-button [matMenuTriggerFor]="menu" color="primary">个人中心</button>
       </div>

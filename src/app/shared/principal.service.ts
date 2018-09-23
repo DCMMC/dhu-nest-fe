@@ -49,4 +49,9 @@ export class PrincipalService {
     return this.http
       .post<User>('/api/users/', { username, email, password });
   }
+
+  lougout() {
+    localStorage.removeItem('auth');
+    this.user = null;
+  }
 }
