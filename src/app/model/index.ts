@@ -3,3 +3,14 @@ export interface User {
   desc: string;
   avatar: string;
 }
+
+
+export interface Catalog {
+  name: string;
+}
+
+export interface Post {
+  title: string;
+  author: User;
+  content: string;
+}

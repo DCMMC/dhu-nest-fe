@@ -1,0 +1,5 @@
+<div style="display: flex; justify-content:flex-start;margin-top:20px">
+  <mat-chip-list>
+    <mat-chip (click)="onClick(item)" [selected]="item === selectedCatalog" [selectable]="true" *ngFor="let item of catalogs">{{ item.name }}</mat-chip>
+  </mat-chip-list>
+</div>

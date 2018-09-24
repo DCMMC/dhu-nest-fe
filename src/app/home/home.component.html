@@ -6,12 +6,12 @@
       </div>
       <div style="display: flex; justify-content:flex-end">
         <mat-form-field>
-          <input matInput placeholder="">
+          <input [disabled]="true" matInput placeholder="">
           <mat-icon matSuffix>search</mat-icon>
         </mat-form-field>
       </div>
     </div>
-    <mat-tab-group>
+    <mat-tab-group [dynamicHeight]="true" [@.disabled]="true">
       <mat-tab label="关注">
         <ng-template matTabContent>
           <app-post-list key="follow"></app-post-list>
@@ -19,6 +19,7 @@
       </mat-tab>
       <mat-tab label="发现">
         <ng-template matTabContent>
+          <app-catalogs style="margin-bottom: 20px"></app-catalogs>
           <app-post-list key="discover"></app-post-list>
         </ng-template>
       </mat-tab>

@@ -1,16 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Post } from '../model';
+import { Catalog } from '../../model/index';
 
 @Injectable({
   providedIn: 'root'
 })
-export class PostService {
+export class CatalogService {
 
   constructor(private http: HttpClient) { }
 
-  getPosts(key) {
-   return this.http.get<Post[]>('/api/posts');
-  }
+  selectedCatalog: Catalog;
 
+  fetchCatalogs() {
+    return this.http.get<Catalog[]>('/api/catalogs');
+  }
 }
